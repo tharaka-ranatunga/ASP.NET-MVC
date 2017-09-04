@@ -7,11 +7,13 @@ using System.Web.Mvc;
 namespace HelloASP.NET.Controllers
 {
     public class HelloController : Controller
-    {
+    { 
         // GET: Hello
         public ActionResult Index()
         {
-            ViewBag.Message = "Hello World";
+            //HttpUtility.HtmlEncode("Hello" + name + "Your ID is" + id);
+            //ViewBag.Message = "Hello" + name + "Your ID is" + id;
+            //return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + id);
             return View();
         }
     }

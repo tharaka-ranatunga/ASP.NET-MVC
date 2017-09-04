@@ -1,0 +1,42 @@
+﻿@model HelloASP.NET.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Details</h2>
+<table>
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            @Model.EmployeeId
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            @Model.EmployeeName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Gender
+        </td>
+        <td>
+            @Model.Gender
+        </td>
+    </tr>
+    <tr>
+        <td>
+            City
+        </td>
+        <td>
+            @Model.City
+        </td>
+    </tr>
+</table>
+
