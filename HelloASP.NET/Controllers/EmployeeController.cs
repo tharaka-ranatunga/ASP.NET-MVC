@@ -16,20 +16,20 @@ namespace HelloASP.NET.Controllers
         public ActionResult Index()
         {
             SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS; database=aspado; integrated security=SSPI");
-            SqlCommand cmd = new SqlCommand("select * from employee",cn);
+            SqlCommand cmd = new SqlCommand("select * from employee where id=1",cn);
             cn.Open();
             Employee employee = new Employee()
             {
-                EmployeeId = 12,
-                EmployeeName = "Tharaka",
-                Gender = "Male",
-                City = "Ragama"
+                id = 12,
+                name = "Tharaka",
+                gender = "Male",
+                city = "Ragama"
             };
             SqlDataReader rdr = cmd.ExecuteReader();
             Console.WriteLine(rdr);
             cn.Close();
             
-            return View(rdr);
+            return View(employee);
         }
     }
 }
